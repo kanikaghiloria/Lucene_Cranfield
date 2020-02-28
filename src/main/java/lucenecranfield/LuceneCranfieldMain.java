@@ -1,16 +1,10 @@
 package lucenecranfield;
 
 import org.apache.lucene.analysis.Analyzer;
-import org.apache.lucene.analysis.TokenStream;
-import org.apache.lucene.analysis.core.SimpleAnalyzer;
-import org.apache.lucene.analysis.core.StopAnalyzer;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;
-import org.apache.lucene.queries.function.valuesource.IDFValueSource;
 import org.apache.lucene.queryparser.classic.ParseException;
-import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.TopDocs;
@@ -23,7 +17,7 @@ import java.util.HashMap;
 /**
  * This class is used to test the indexing and search capability of lucene library
  */
-public class LuceneTester {
+public class LuceneCranfieldMain {
     String indexDir = "index";
     String documentsCollectionPath = "DocumentsCollection";
     String dataDir = "cran.all.1400";
@@ -42,9 +36,9 @@ public class LuceneTester {
      * @throws ParseException
      */
     public static void main(String[] args) throws IOException, ParseException, InvalidTokenOffsetsException {
-        LuceneTester tester;
+        LuceneCranfieldMain tester;
 
-        tester = new LuceneTester();
+        tester = new LuceneCranfieldMain();
 //        tester.createIndex();
 //        tester.search("Mohan");
 //        tester.search("aeronautical engineering");

@@ -2,22 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index/_f.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_f.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_f.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/segments_g" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_9.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_9.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_9.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/segments_a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/output_relevance.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/output_relevance.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,8 +50,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="LuceneTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="lucenecranfield.LuceneTester" />
+    <configuration name="LuceneCranfieldMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="lucenecranfield.LuceneCranfieldMain" />
       <module name="Lucene_Cranfield" />
       <extension name="coverage">
         <pattern>
@@ -80,7 +65,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LuceneTester" />
+        <item itemvalue="Application.LuceneCranfieldMain" />
       </list>
     </recent_temporary>
   </component>
@@ -107,7 +92,7 @@
       <workItem from="1582741401249" duration="1692000" />
       <workItem from="1582814191989" duration="2942000" />
       <workItem from="1582827511269" duration="3163000" />
-      <workItem from="1582847939383" duration="3963000" />
+      <workItem from="1582847939383" duration="4654000" />
     </task>
     <servers />
   </component>
@@ -138,22 +123,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" width="503" height="487" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582848531072" />
-    <state width="1237" height="85" key="GridCell.Tab.0.bottom" timestamp="1582851879332">
+    <state width="1237" height="57" key="GridCell.Tab.0.bottom" timestamp="1582852050480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582851879332" />
-    <state width="1237" height="85" key="GridCell.Tab.0.center" timestamp="1582851879332">
+    <state width="1237" height="57" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582852050480" />
+    <state width="1237" height="57" key="GridCell.Tab.0.center" timestamp="1582852050480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582851879332" />
-    <state width="1237" height="85" key="GridCell.Tab.0.left" timestamp="1582851879332">
+    <state width="1237" height="57" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582852050480" />
+    <state width="1237" height="57" key="GridCell.Tab.0.left" timestamp="1582852050465">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582851879332" />
-    <state width="1237" height="85" key="GridCell.Tab.0.right" timestamp="1582851879332">
+    <state width="1237" height="57" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582852050465" />
+    <state width="1237" height="57" key="GridCell.Tab.0.right" timestamp="1582852050480">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="85" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582851879332" />
+    <state width="1237" height="57" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582852050480" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1582596424846">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
