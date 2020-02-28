@@ -197,7 +197,7 @@ public class Indexer
             String line = br.readLine();
             while(line != null)
             {
-                fout = new File(docCollectionPath + "\\doc" + i);
+                fout = new File(docCollectionPath + "/doc" + i);
 //                if (fout.createNewFile()) {
 //                                                                                            //                    System.out.println("File created: " + fout.getName());
 //                } else {

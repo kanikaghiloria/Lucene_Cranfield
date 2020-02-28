@@ -127,7 +127,7 @@ public class LuceneCranfieldMain {
 //                    System.out.println("=======================================");
 //                }
 
-                bw.write(queryCount + " " + "Q0" + " " + doc.getField(LuceneConstants.FILE_ID).stringValue() + " " + num + " " + scoreDoc.score + " " +"STANDARD");
+                bw.write(queryCount + " " + "Q0" + " " + doc.getField(LuceneConstants.FILE_ID).stringValue() + " " + num++ + " " + scoreDoc.score + " " +"STANDARD");
                 bw.newLine();
                 ctr++;
             }

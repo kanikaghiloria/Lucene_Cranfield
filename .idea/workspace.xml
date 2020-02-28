@@ -2,16 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index/_i.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_i.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_i.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/segments_j" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/_k.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/_k.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/_k.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/segments_l" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_h.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_h.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_h.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/segments_i" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_i.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_i.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_i.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/segments_j" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +103,7 @@
       <workItem from="1582741401249" duration="1692000" />
       <workItem from="1582814191989" duration="2942000" />
       <workItem from="1582827511269" duration="3163000" />
-      <workItem from="1582847939383" duration="6032000" />
+      <workItem from="1582847939383" duration="8915000" />
     </task>
     <servers />
   </component>
@@ -132,22 +134,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" width="503" height="487" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582848531072" />
-    <state width="1237" height="67" key="GridCell.Tab.0.bottom" timestamp="1582855153060">
+    <state width="1237" height="75" key="GridCell.Tab.0.bottom" timestamp="1582858747610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="67" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582855153060" />
-    <state width="1237" height="67" key="GridCell.Tab.0.center" timestamp="1582855153060">
+    <state width="1237" height="75" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
+    <state width="1237" height="75" key="GridCell.Tab.0.center" timestamp="1582858747610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="67" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582855153060" />
-    <state width="1237" height="67" key="GridCell.Tab.0.left" timestamp="1582855153060">
+    <state width="1237" height="75" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
+    <state width="1237" height="75" key="GridCell.Tab.0.left" timestamp="1582858747610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="67" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582855153060" />
-    <state width="1237" height="67" key="GridCell.Tab.0.right" timestamp="1582855153060">
+    <state width="1237" height="75" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
+    <state width="1237" height="75" key="GridCell.Tab.0.right" timestamp="1582858747610">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="67" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582855153060" />
+    <state width="1237" height="75" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1582596424846">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
