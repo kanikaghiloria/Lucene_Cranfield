@@ -15,6 +15,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
@@ -26,15 +27,9 @@ public class Indexer
     private Directory indexDirectory;
     File fin, fout;
 
-    /**
-     *
-     * @param indexDirectoryPath
-     * @throws IOException
-     */
     public Indexer(String indexDirectoryPath, Analyzer analyzer, Similarity similarity) throws IOException
     {
         //this directory will contain indexes
-
         indexDirectory = FSDirectory.open(Paths.get(indexDirectoryPath));
 //        String [] list = indexDirectory.listAll();
 //        for(int i=0; i<list.length; i++)
@@ -43,33 +38,23 @@ public class Indexer
 //        }
 
         //create the indexer
-//        analyzer = new StandardAnalyzer(); //used to process text field
         IndexWriterConfig cfg = new IndexWriterConfig(analyzer);
         cfg.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
         cfg.setSimilarity(similarity);
         writer = new IndexWriter(indexDirectory, new IndexWriterConfig(analyzer));
     }
-    /**
-     *
-     * @throws CorruptIndexException
-     * @throws IOException
-     */
-    public void close() throws CorruptIndexException, IOException { writer.close(); }
-    /**
-     *
-     * @param file
-     * @return
-     * @throws IOException
-     */
+
+    public void close() throws IOException { writer.close(); }
+
     private Document getDocument(File file) throws IOException
     {
         Document document = new Document();
         Field fileIdField, titleField, authorField, bibliographyField, filePathField;
         String[] id = null;
-        String title = "";
-        String author = "";
-        String bibliography = "";
-        String text = "";
+        StringBuilder title = new StringBuilder();
+        StringBuilder author = new StringBuilder();
+        StringBuilder bibliography = new StringBuilder();
+        StringBuilder text = new StringBuilder();
         File wordFile;
         FileOutputStream fosW;
         BufferedWriter bwW;
@@ -80,8 +65,6 @@ public class Indexer
         wordFile = new File("DocumentsCollection/contentFile");
         fosW = new FileOutputStream(wordFile);
         bwW = new BufferedWriter(new OutputStreamWriter(fosW));
-
-
         BufferedReader br = new BufferedReader(new FileReader(file));
         String line = br.readLine();
         while(line != null)
@@ -95,7 +78,7 @@ public class Indexer
             {
                 line = br.readLine();
                 while (!Pattern.matches("[.][A]", line)) {
-                    title = title + " " + line;
+                    title.append(" ").append(line);
 //                   System.out.println(".T: " + line);
                    line = br.readLine();
                }
@@ -104,7 +87,7 @@ public class Indexer
             {
                 line = br.readLine();
                 while (!Pattern.matches("[.][B]", line)) {
-                    author = author + " " + line;
+                    author.append(" ").append(line);
 //                    System.out.println(".A: " + line);
                     line = br.readLine();
                 }
@@ -113,7 +96,7 @@ public class Indexer
             {
                 line = br.readLine();
                 while (!Pattern.matches("[.][W]", line)) {
-                    bibliography = bibliography + " " + line;
+                    bibliography.append(" ").append(line);
 //                    System.out.println(".B: " + line);
                     line = br.readLine();
                 }
@@ -122,7 +105,7 @@ public class Indexer
             {
                 line = br.readLine();
                 while (line != null) {
-                    text = text + line + "\n";
+                    text.append(line).append("\n");
                     bwW.write(line);
                     bwW.newLine();
 //                    System.out.println(".W: " + line);
@@ -134,13 +117,12 @@ public class Indexer
         br.close();
 
         filePathField = new StringField(LuceneConstants.FILE_PATH, file.getCanonicalPath(), Field.Store.YES);
-        fileIdField = new StringField(LuceneConstants.FILE_ID, id[1], Field.Store.YES); //        System.out.println("fileIdField: " + fileIdField.stringValue());
-        titleField = new TextField(LuceneConstants.TITLE, title, Field.Store.YES);//        System.out.println("titleField: " + titleField.stringValue());
-        authorField = new TextField(LuceneConstants.AUTHOR, author, Field.Store.YES);//        System.out.println("authorField: " + authorField.stringValue());
-        bibliographyField = new TextField(LuceneConstants.BIBLIOGRAPHY, bibliography, Field.Store.YES);//        System.out.println("bibliographyField: " + bibliographyField.stringValue());
+        fileIdField = new StringField(LuceneConstants.FILE_ID, Objects.requireNonNull(id)[1], Field.Store.YES); //        System.out.println("fileIdField: " + fileIdField.stringValue());
+        titleField = new TextField(LuceneConstants.TITLE, title.toString(), Field.Store.YES);//        System.out.println("titleField: " + titleField.stringValue());
+        authorField = new TextField(LuceneConstants.AUTHOR, author.toString(), Field.Store.YES);//        System.out.println("authorField: " + authorField.stringValue());
+        bibliographyField = new TextField(LuceneConstants.BIBLIOGRAPHY, bibliography.toString(), Field.Store.YES);//        System.out.println("bibliographyField: " + bibliographyField.stringValue());
 //        Field contentField = new TextField(LuceneConstants.CONTENTS, new FileReader(wordFile));//        System.out.println("contentField: " + contentField.stringValue());
-        Field contentField = new TextField(LuceneConstants.CONTENTS, text, Field.Store.YES);//        System.out.println("contentField: " + contentField.stringValue());
-
+        Field contentField = new TextField(LuceneConstants.CONTENTS, text.toString(), Field.Store.YES);//        System.out.println("contentField: " + contentField.stringValue());
 
         //index file path
         document.add(filePathField);
@@ -154,11 +136,7 @@ public class Indexer
 
         return document;
     }
-    /**
-     *
-     * @param file
-     * @throws IOException
-     */
+
     private void indexFiles(File file) throws IOException {
 //        System.out.println("Indexing "+file.getCanonicalPath());
         Document document = getDocument(file);
@@ -185,10 +163,9 @@ public class Indexer
 //                                                                                            System.out.println("document: " + document);
 //        writer.addDocument(document);
         writer.updateDocument(new Term("filePath", file.getCanonicalPath()), document);
-
     }
 
-    public IndexWriter.DocStats createIndex(String dataDirPath, String docCollectionPath) throws IOException {
+    public IndexWriter.DocStats createIndex(String dataDirPath, String docCollectionPath) {
 //    public void createIndexNew(String dataDirPath, FileFilter filter) throws IOException {
         try {
             fin = new File(dataDirPath);

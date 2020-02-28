@@ -2,9 +2,11 @@ package lucenecranfield;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.en.EnglishAnalyzer;
+import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.queryparser.classic.ParseException;
+import org.apache.lucene.search.Explanation;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.Sort;
 import org.apache.lucene.search.TopDocs;
@@ -29,12 +31,6 @@ public class LuceneCranfieldMain {
     HashMap<Integer, String> queries;
     File fout;
 
-    /**
-     *
-     * @param args
-     * @throws IOException
-     * @throws ParseException
-     */
     public static void main(String[] args) throws IOException, ParseException, InvalidTokenOffsetsException {
         LuceneCranfieldMain tester;
 
@@ -63,10 +59,6 @@ public class LuceneCranfieldMain {
 //        return new StopAnalyzer(LuceneConstants.stopWordsSet);
     }
 
-    /**
-     *
-     * @throws IOException
-     */
     private void createIndex(Similarity similarity) throws IOException {
         indexer = new Indexer(indexDir, getAnalyzer(), similarity);
         IndexWriter.DocStats numIndexed;
@@ -79,13 +71,7 @@ public class LuceneCranfieldMain {
 //                +(endTime-startTime)+" ms");
     }
 
-    /**
-     *
-     *
-     * @throws IOException
-     * @throws ParseException
-     */
-    private void search(Similarity similarity) throws IOException, ParseException, InvalidTokenOffsetsException {
+    private void search(Similarity similarity) throws IOException, ParseException {
 
         int num =0;
 //        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_INDEXORDER);
@@ -111,19 +97,20 @@ public class LuceneCranfieldMain {
                 int docid = hits.scoreDocs[ctr].doc;
 
                 Document doc = searcher.getDocument(scoreDoc);
-//                if(queryCount < 4)
-//                {
+
+//                if(queryCount < 4) {
 //                    System.out.println(queryCount + " : " + queries.get(i));
 //                    System.out.println("File id: " + doc.getField(LuceneConstants.FILE_ID).stringValue());
 //                    System.out.println("File Path: " + doc.get(LuceneConstants.FILE_PATH));
-//    //                System.out.println("File Title: " + doc.getField(LuceneConstants.TITLE).stringValue());
-//    //                System.out.println("File Author: " + doc.getField(LuceneConstants.AUTHOR).stringValue());
+//
+//                    //                System.out.println("File Title: " + doc.getField(LuceneConstants.TITLE).stringValue());
+//                    //                System.out.println("File Author: " + doc.getField(LuceneConstants.AUTHOR).stringValue());
 //                    System.out.println("Score: " + scoreDoc.score);
 //
 //                    searcher.highlightResults(docid, getAnalyzer(), LuceneConstants.TITLE, doc.get(LuceneConstants.TITLE));
 //                    searcher.highlightResults(docid, getAnalyzer(), LuceneConstants.AUTHOR, doc.get(LuceneConstants.AUTHOR));
 //                    searcher.highlightResults(docid, getAnalyzer(), LuceneConstants.BIBLIOGRAPHY, doc.get(LuceneConstants.BIBLIOGRAPHY));
-//                    searcher.highlightResults(docid, getAnalyzer(),LuceneConstants.CONTENTS, doc.get(LuceneConstants.CONTENTS));
+//                    searcher.highlightResults(docid, getAnalyzer(), LuceneConstants.CONTENTS, doc.get(LuceneConstants.CONTENTS));
 //                    System.out.println("=======================================");
 //                }
 

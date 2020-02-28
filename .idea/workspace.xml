@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/index/_k.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_k.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_k.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/segments_l" afterDir="false" />
+    <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="project submission">
+      <change afterPath="$PROJECT_DIR$/index/_16.cfe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/_16.cfs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/_16.si" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index/segments_17" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_i.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_i.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_i.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/segments_j" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_l.cfe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_l.cfs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/_l.si" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index/segments_m" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputQrel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputQrel.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Searcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/TextFileFilter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneCranfieldMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneCranfieldMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Searcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Searcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/TextFileFilter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +61,9 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="D:/Lectures/sem 2/Info Retreival and Web search/LuceneCranfield18315430" />
+    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -103,7 +114,7 @@
       <workItem from="1582741401249" duration="1692000" />
       <workItem from="1582814191989" duration="2942000" />
       <workItem from="1582827511269" duration="3163000" />
-      <workItem from="1582847939383" duration="8915000" />
+      <workItem from="1582847939383" duration="24218000" />
     </task>
     <servers />
   </component>
@@ -112,6 +123,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="project submission" />
+    <option name="LAST_COMMIT_MESSAGE" value="project submission" />
   </component>
   <component name="WindowStateProjectService">
     <state x="360" y="0" key="#LuceneTester" timestamp="1582848552899">
@@ -130,30 +143,38 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="399" y="80" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1582137962554" />
+    <state x="235" y="0" key="CommitChangelistDialog2" timestamp="1582919360939">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="235" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582919360939" />
     <state x="421" y="96" width="503" height="487" key="FileChooserDialogImpl" timestamp="1582848531072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="421" y="96" width="503" height="487" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1582848531072" />
-    <state width="1237" height="75" key="GridCell.Tab.0.bottom" timestamp="1582858747610">
+    <state width="1237" height="153" key="GridCell.Tab.0.bottom" timestamp="1582919576329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="75" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
-    <state width="1237" height="75" key="GridCell.Tab.0.center" timestamp="1582858747610">
+    <state width="1237" height="153" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1582919576329" />
+    <state width="1237" height="153" key="GridCell.Tab.0.center" timestamp="1582919576329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="75" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
-    <state width="1237" height="75" key="GridCell.Tab.0.left" timestamp="1582858747610">
+    <state width="1237" height="153" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1582919576329" />
+    <state width="1237" height="153" key="GridCell.Tab.0.left" timestamp="1582919576329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="75" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
-    <state width="1237" height="75" key="GridCell.Tab.0.right" timestamp="1582858747610">
+    <state width="1237" height="153" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1582919576329" />
+    <state width="1237" height="153" key="GridCell.Tab.0.right" timestamp="1582919576329">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="75" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582858747610" />
+    <state width="1237" height="153" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1582919576329" />
     <state x="171" y="0" key="Maven.ArtifactSearchDialog" timestamp="1582596424846">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="171" y="0" key="Maven.ArtifactSearchDialog/0.0.1280.680@0.0.1280.680" timestamp="1582596424846" />
+    <state x="121" y="0" key="SettingsEditor" timestamp="1582905360369">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="121" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1582905360369" />
     <state x="337" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1582741419421">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -7,6 +7,7 @@ import org.apache.lucene.document.Document;
 import org.apache.lucene.index.CorruptIndexException;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
+import org.apache.lucene.index.Term;
 import org.apache.lucene.queryparser.classic.MultiFieldQueryParser;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
@@ -20,6 +21,7 @@ import org.apache.lucene.store.FSDirectory;
 import java.io.*;
 import java.nio.file.Paths;
 import java.util.HashMap;
+import java.util.Objects;
 import java.util.regex.Pattern;
 
 /**
@@ -33,11 +35,7 @@ public class Searcher
     IndexReader reader;
     Query query;
     HashMap<Integer, String> queries;
-    /**
-     *
-     * @param indexDirectoryPath
-     * @throws IOException
-     */
+
     public Searcher(String indexDirectoryPath, Analyzer analyzer, Similarity similarity) throws IOException {
         indexDirectory = FSDirectory.open(Paths.get(indexDirectoryPath));
         reader = DirectoryReader.open(indexDirectory);
@@ -49,14 +47,7 @@ public class Searcher
         queryParser = new MultiFieldQueryParser(new String[]{LuceneConstants.TITLE, LuceneConstants.AUTHOR, LuceneConstants.BIBLIOGRAPHY, LuceneConstants.CONTENTS}, analyzer);
 //        queryParser = new MultiFieldQueryParser(new String[]{LuceneConstants.CONTENTS}, analyzer);
     }
-    /**
-     *
-     * @param searchQuery
-     * @param indexorder
-     * @return
-     * @throws ParseException
-     * @throws IOException
-     */
+
     public TopDocs search(String searchQuery, Sort indexorder) throws ParseException, IOException {
         searchQuery = searchQuery.trim();
         searchQuery = searchQuery.replaceAll("[^a-zA-Z0-9\\s.-]","");
@@ -64,14 +55,8 @@ public class Searcher
 //        System.out.println("Searching for: " + searchQuery);
         return indexSearcher.search(query, LuceneConstants.MAX_SEARCH);
     }
-    /**
-     *
-     * @param scoreDoc
-     * @return
-     * @throws CorruptIndexException
-     * @throws IOException
-     */
-    public Document getDocument(ScoreDoc scoreDoc) throws CorruptIndexException, IOException {
+
+    public Document getDocument(ScoreDoc scoreDoc) throws IOException {
         return indexSearcher.doc(scoreDoc.doc);
     }
 
@@ -97,13 +82,13 @@ public class Searcher
     public HashMap<Integer, String> returnQueries(String path) throws IOException {
         File queryFile = new File(path);
         BufferedReader br = new BufferedReader(new FileReader(queryFile));
-        queries = new HashMap<Integer, String>();
+        queries = new HashMap<>();
         String line = br.readLine();
         int i=0;
         while(line != null)
         {
             String[] str = null;
-            String query = "";
+            StringBuilder query = new StringBuilder();
             if (Pattern.matches("[.][I][ ][0-9]+", line)) {
                 str = line.split("[ ]");
                 line = br.readLine();
@@ -113,12 +98,12 @@ public class Searcher
                 line = br.readLine();
                 while (line != null && !Pattern.matches("[.][I][ ][0-9]+", line))
                 {
-                    query = query + " " + line;
+                    query.append(" ").append(line);
 //                   System.out.println(".T: " + line);
                     line = br.readLine();
                 }
             }
-            queries.put(Integer.parseInt(str[1]), query);
+            queries.put(Integer.parseInt(Objects.requireNonNull(str)[1]), query.toString());
 
 //            i++;
 //            if(i == 4)
