@@ -21,7 +21,7 @@ public class LuceneConstants
     public static final String OUTPUT_FILE_RELEVANCE = "\\output_relevance.txt";
     public static final String OUTPUT_FILE_RELEVANCE_ENGLISH_ANALYZER = "\\output_relevance_englishanalyzer.txt";
     public static final String OUTPUT_FILE_INDEXORDER = "\\output_indexorder.txt";
-    public static final int MAX_SEARCH = 100;
+    public static final int MAX_SEARCH = 120;
     public static final List<String> stopWords = new ArrayList<String>(
             Arrays.asList("a", "an", "and", "are", "as", "at", "be", "but", "by",
                     "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such",

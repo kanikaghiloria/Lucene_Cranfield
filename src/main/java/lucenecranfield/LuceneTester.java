@@ -24,11 +24,11 @@ import java.util.HashMap;
  * This class is used to test the indexing and search capability of lucene library
  */
 public class LuceneTester {
-    String indexDir = "D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneData\\index";
-    String documentsCollectionPath = "D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneData\\CranfieldDocumentsCollection";
-    String dataDir = "D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneData\\cran.all.1400";
-    String queriesDir = "D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneData\\cran.qry";
-    String outputDir = "D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneCranfield18315430";
+    String indexDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\index";
+    String documentsCollectionPath = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\DocumentsCollection";
+    String dataDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\cran.all.1400";
+    String queriesDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\cran.qry";
+    String outputDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield";
     Indexer indexer;
     Searcher searcher;
     HashMap<Integer, String> queries;
@@ -48,33 +48,24 @@ public class LuceneTester {
 //        tester.search("Mohan");
 //        tester.search("aeronautical engineering");
 //        tester.search("brenckman");
-//        tester.search("experimental investigation of the aerodynamics of a wing in a slipstream");
 //        tester.search("propeller slipstream");
 //        tester.search("what chemical kinetic system is applicable to hypersonic aerodynamic problems");
 
-//        tester.createIndex(new BM25Similarity());
-//        tester.search(new BM25Similarity());
+        tester.createIndex(new BM25Similarity());
+        tester.search(new BM25Similarity());
 
 //        tester.createIndex(new ClassicSimilarity());
 //        tester.search(new ClassicSimilarity());
 //
-        tester.createIndex(new LMDirichletSimilarity());
-        tester.search(new LMDirichletSimilarity());
-
-//        tester.search(new MultiSimilarity());
-//        tester.search(new IBSimilarity());
-//        tester.search(new DFRSimilarity());
-
-////        tester.search(new LMJelinekMercerSimilarity());
+//        tester.createIndex(new LMDirichletSimilarity());
+//        tester.search(new LMDirichletSimilarity());
 
     }
     public Analyzer getAnalyzer()
     {
-//        return new StandardAnalyzer(LuceneConstants.stopWordsSet);
         return new EnglishAnalyzer(LuceneConstants.stopWordsSet);
+//        return new StandardAnalyzer(LuceneConstants.stopWordsSet);
 //        return new StopAnalyzer(LuceneConstants.stopWordsSet);
-//        return new StopAnalyzer(LuceneConstants.stopWordsSet);
-//        return new SimpleAnalyzer();
     }
 
     /**
@@ -105,7 +96,6 @@ public class LuceneTester {
         int num =0;
 //        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_INDEXORDER);
         fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_RELEVANCE);
-        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_RELEVANCE_ENGLISH_ANALYZER);
         FileOutputStream fos = new FileOutputStream(fout);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
 

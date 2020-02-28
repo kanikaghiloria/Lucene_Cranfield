@@ -1,7 +1,5 @@
 package lucenecranfield;
 
-//This class is used to index the raw data so that we can make it searchable using the Lucene library
-
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.*;
@@ -79,7 +77,7 @@ public class Indexer
         //Index file contents
 
 //        wordFile = File.createTempFile("wordFile", ".txt", new File("D:\\Lectures\\sem 2\\Info Retreival and Web search"));
-        wordFile = new File("D:\\Lectures\\sem 2\\Info Retreival and Web search\\LuceneData\\CranfieldDocumentsCollection\\contentFile");
+        wordFile = new File("C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\DocumentsCollection\\contentFile");
         fosW = new FileOutputStream(wordFile);
         bwW = new BufferedWriter(new OutputStreamWriter(fosW));
 
