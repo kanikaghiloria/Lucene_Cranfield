@@ -24,11 +24,12 @@ import java.util.HashMap;
  * This class is used to test the indexing and search capability of lucene library
  */
 public class LuceneTester {
-    String indexDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\index";
-    String documentsCollectionPath = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\DocumentsCollection";
-    String dataDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\cran.all.1400";
-    String queriesDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\cran.qry";
-    String outputDir = "C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield";
+    String indexDir = "index";
+    String documentsCollectionPath = "DocumentsCollection";
+    String dataDir = "cran.all.1400";
+    String queriesDir = "cran.qry";
+//    String outputDir = "src/main/java/lucenecranfield/";
+    String outputDir = "outputQrel.txt";
     Indexer indexer;
     Searcher searcher;
     HashMap<Integer, String> queries;
@@ -80,8 +81,8 @@ public class LuceneTester {
         numIndexed = indexer.createIndex(dataDir, documentsCollectionPath);
         long endTime = System.currentTimeMillis();
         indexer.close();
-        System.out.println(numIndexed+" File indexed, time taken: "
-                +(endTime-startTime)+" ms");
+//        System.out.println(numIndexed+" File indexed, time taken: "
+//                +(endTime-startTime)+" ms");
     }
 
     /**
@@ -90,12 +91,12 @@ public class LuceneTester {
      * @throws IOException
      * @throws ParseException
      */
-//    private void search(String searchQuery) throws IOException, ParseException, InvalidTokenOffsetsException {
     private void search(Similarity similarity) throws IOException, ParseException, InvalidTokenOffsetsException {
 
         int num =0;
 //        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_INDEXORDER);
-        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_RELEVANCE);
+//        fout = new File(outputDir + LuceneConstants.OUTPUT_FILE_RELEVANCE);
+        fout = new File(outputDir);
         FileOutputStream fos = new FileOutputStream(fout);
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
 

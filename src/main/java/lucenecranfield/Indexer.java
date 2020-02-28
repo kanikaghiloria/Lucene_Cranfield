@@ -77,7 +77,7 @@ public class Indexer
         //Index file contents
 
 //        wordFile = File.createTempFile("wordFile", ".txt", new File("D:\\Lectures\\sem 2\\Info Retreival and Web search"));
-        wordFile = new File("C:\\Users\\HP\\Documents\\GitHub\\Lucene_Cranfield\\DocumentsCollection\\contentFile");
+        wordFile = new File("DocumentsCollection/contentFile");
         fosW = new FileOutputStream(wordFile);
         bwW = new BufferedWriter(new OutputStreamWriter(fosW));
 
@@ -140,7 +140,6 @@ public class Indexer
         bibliographyField = new TextField(LuceneConstants.BIBLIOGRAPHY, bibliography, Field.Store.YES);//        System.out.println("bibliographyField: " + bibliographyField.stringValue());
 //        Field contentField = new TextField(LuceneConstants.CONTENTS, new FileReader(wordFile));//        System.out.println("contentField: " + contentField.stringValue());
         Field contentField = new TextField(LuceneConstants.CONTENTS, text, Field.Store.YES);//        System.out.println("contentField: " + contentField.stringValue());
-//        Field contentField = new Field(LuceneConstants.CONTENTS, text, Field.Store.YES)//        System.out.println("contentField: " + contentField.stringValue());
 
 
         //index file path
