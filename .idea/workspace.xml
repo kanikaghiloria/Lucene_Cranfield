@@ -1,27 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="project submission">
-      <change afterPath="$PROJECT_DIR$/index/_16.cfe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_16.cfs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/_16.si" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/index/segments_17" afterDir="false" />
+    <list default="true" id="4888ac05-a2a9-4b13-a4c0-4d8a238cfab9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_l.cfe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_l.cfs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/_l.si" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index/segments_m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/outputQrel.txt" beforeDir="false" afterPath="$PROJECT_DIR$/outputQrel.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Indexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/LuceneCranfieldMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/Searcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lucenecranfield/Searcher.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lucenecranfield/TextFileFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Indexer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneConstants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneCranfieldMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/LuceneCranfieldMain.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/Searcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lucenecranfield/Searcher.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lucenecranfield/TextFileFilter.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,8 +95,16 @@
       <workItem from="1582741401249" duration="1692000" />
       <workItem from="1582814191989" duration="2942000" />
       <workItem from="1582827511269" duration="3163000" />
-      <workItem from="1582847939383" duration="24218000" />
+      <workItem from="1582847939383" duration="24841000" />
     </task>
+    <task id="LOCAL-00001" summary="project submission">
+      <created>1582919608819</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1582919608819</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,10 +132,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="399" y="80" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.680@0.0.1280.680" timestamp="1582137962554" />
-    <state x="235" y="0" key="CommitChangelistDialog2" timestamp="1582919607189">
+    <state x="235" y="0" key="CommitChangelistDialog2" timestamp="1582920989724">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="235" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582919607189" />
+    <state x="235" y="0" key="CommitChangelistDialog2/0.0.1280.680@0.0.1280.680" timestamp="1582920989724" />
     <state x="421" y="96" width="503" height="487" key="FileChooserDialogImpl" timestamp="1582848531072">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
